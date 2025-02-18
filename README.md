@@ -1,3 +1,5 @@
+이 앱은 pngquant을 사용합니다.
+
 pngquant © 2009-2018 by Kornel Lesiński.
 GNU General Public License v3 (GPL v3) 또는 그 이후 버전으로 배포됩니다.
 
