@@ -10,6 +10,8 @@ BSD 라이선스 적용 파일:
 - `rwpng.c/h` 및 일부 코드
 
 
+![image](https://github.com/user-attachments/assets/4d76d24b-5255-4e8c-8eb8-7d6ead8cdfcf)
+
 옵션 설명
 -
 - 압축품질 : 전체적인 품질 적용.
