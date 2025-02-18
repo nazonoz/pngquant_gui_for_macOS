@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>PNGCompressor Updates</title>
-    <link>https://github.com/사용자명/저장소명/releases/latest</link>
+    <link>https://github.com/nazonoz/pngquant_gui_for_macOS/releases/latest</link>
     <description>Latest updates for PNGCompressor</description>
     <language>en</language>
     <item>
