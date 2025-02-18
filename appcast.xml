@@ -9,9 +9,9 @@
       <title>Version 0.1.3</title>
       <sparkle:releaseNotesLink>https://github.com/nazonoz/pngquant_gui_for_macOS/releases/tag/v0.1.3</sparkle:releaseNotesLink>
       <pubDate>Mon, 19 Feb 2025 12:00:00 +0000</pubDate>
-      <enclosure url="https://github.com/nazonoz/pngquant_gui_for_macOS/releases/download/v0.0.3/PNGCompressor-0.0.3.zip"
+      <enclosure url="https://github.com/nazonoz/pngquant_gui_for_macOS/releases/download/v0.1.3/PNGCompressor-0.1.3.zip"
                  sparkle:version="013"
-                 sparkle:shortVersionString="0.0.3"
+                 sparkle:shortVersionString="0.1.3"
                  type="application/octet-stream"/>
     </item>
   </channel>
