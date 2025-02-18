@@ -471,7 +471,7 @@ struct ContentView: View {
                                 
                                 --
                                 소스코드 공개
-                                https://github.com/nazonoz/
+                                https://github.com/nazonoz/pngquant_gui_for_macOS
                                 --
                                 
                                 옵션 설명
