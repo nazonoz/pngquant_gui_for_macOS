@@ -1,1 +1,21 @@
-...모...몰라요 난 그냥 없으니까 만들어본 디자이너야...
+pngquant © 2009-2018 by Kornel Lesiński.
+GNU General Public License v3 (GPL v3) 또는 그 이후 버전으로 배포됩니다.
+
+소스 코드 및 라이선스 내용은 다음을 참조하세요:
+https://github.com/kornelski/pngquant
+
+BSD 라이선스 적용 파일:
+- `rwpng.c/h` 및 일부 코드
+
+
+옵션 설명
+-
+- 압축품질 : 전체적인 품질 적용.
+- 색상 수 : 압축에 사용할 색상 수. 색상을 적게 사용할 수록 용량이 줄어듬.
+- Floyd–Steinberg 디더링 : Floyd–Steinberg 알고리즘 기반 디더링 적용 강도. 0 = 적용안함, 1 = 최대치 적용.
+- S/Q : Speed/Quality Trade-off. 1=로딩속도가 느리고 품질이 좋음, 11=로딩속도가 빠르고 품질이 나쁨. 로딩속도가 용량을 뜻하지는 않음
+
+
+v0.1.3
+-
+추가하고 싶은게 많고... 버그도 많지만 당분간 수정하지 않기로 한다...(첫공개버전)
