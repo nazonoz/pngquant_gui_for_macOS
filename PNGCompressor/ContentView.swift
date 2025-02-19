@@ -1,5 +1,71 @@
 import SwiftUI
 import UniformTypeIdentifiers
+import Sparkle
+
+//update check
+class UpdateManager: NSObject, ObservableObject, SPUUpdaterDelegate {
+    var updater: SPUUpdater?
+    private let githubAPIURL = "https://api.github.com/repos/nazonoz/pngquant_gui_for_macOS/releases/latest"
+
+    override init() {
+        super.init()
+        
+        let hostBundle = Bundle.main
+        let userDriver = SPUStandardUserDriver(hostBundle: hostBundle, delegate: nil)
+
+        updater = SPUUpdater(hostBundle: hostBundle, applicationBundle: hostBundle, userDriver: userDriver, delegate: self)
+
+        do {
+            try updater?.start()
+        } catch {
+            print("❌ Sparkle 업데이트 시작 오류: \(error.localizedDescription)")
+        }
+        
+        checkForUpdatesFromGitHub() // ✅ 앱 시작 시 자동 업데이트 체크
+    }
+
+    func checkForUpdates() {
+        updater?.checkForUpdates()
+    }
+
+    /// 🔥 GitHub API에서 최신 릴리스 정보 가져와서 업데이트 확인
+    private func checkForUpdatesFromGitHub() {
+        guard let url = URL(string: githubAPIURL) else { return }
+
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                print("❌ GitHub API 요청 실패: \(error?.localizedDescription ?? "알 수 없는 오류")")
+                return
+            }
+
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                   let latestVersion = json["tag_name"] as? String {  // GitHub에서 최신 버전 가져오기
+                    DispatchQueue.main.async {
+                        self.compareVersions(latestVersion: latestVersion)
+                    }
+                }
+            } catch {
+                print("❌ JSON 파싱 오류: \(error.localizedDescription)")
+            }
+        }
+        task.resume()
+    }
+
+    /// 🔥 현재 버전과 비교하여 자동 업데이트 실행
+    private func compareVersions(latestVersion: String) {
+        guard let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return }
+
+        print("🔎 현재 버전: \(currentVersion), 최신 버전: \(latestVersion)")
+
+        if latestVersion.compare(currentVersion, options: .numeric) == .orderedDescending {
+            print("🚀 새로운 업데이트 발견! 업데이트 진행 중...")
+            updater?.checkForUpdates()  // 자동 업데이트 실행
+        } else {
+            print("✅ 최신 상태입니다.")
+        }
+    }
+}
 
 // MARK: - ScrollWheelView
 class ScrollWheelTrackingView: NSView {
@@ -88,6 +154,9 @@ struct ContentView: View {
     
     @State private var showErrorAlert = false
     @State private var errorMessage = ""
+    
+    //updatecheck
+    @StateObject private var updateManager = UpdateManager()
     
     // 포매터 (정수 전용)
     private let qualityFormatter: NumberFormatter = {
@@ -265,7 +334,7 @@ struct ContentView: View {
                                 .frame(width: 30, height: 30)
                             }
                             .padding(6)
-                            .background(Color.white.opacity(0.5))
+                            .background(Color.gray.opacity(0.5))
                             .cornerRadius(8)
                             .padding(12)
                             .zIndex(100) // 🎯 버튼을 최상단으로 배치
@@ -470,7 +539,7 @@ struct ContentView: View {
                                 - `rwpng.c/h` 및 일부 코드
                                 
                                 --
-                                소스코드 공개
+                                GPL v3 공개의무에 따른 소스코드 공개
                                 https://github.com/nazonoz/pngquant_gui_for_macOS
                                 --
                                 
@@ -482,8 +551,11 @@ struct ContentView: View {
                                 
                                 --
                                 
+                                v0.1.4
+                                자동 업데이트 기능 추가
+                                
                                 v0.1.3
-                                추가하고 싶은게 많고... 버그도 많지만 당분간 수정하지 않기로 한다...
+                                최초공개버전
                                 """)
                             .font(.body)
                             .padding(.top, 5)
@@ -491,6 +563,10 @@ struct ContentView: View {
                         .padding()
                     }
                     HStack {
+                        Button("업데이트 확인") {
+                            updateManager.checkForUpdates()
+                        }
+                        .padding()
                         Button("임시 파일 폴더 보기") {
                             showTemporaryFolder()
                         }

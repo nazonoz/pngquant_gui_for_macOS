@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>ko</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>ko</string>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.takkun.PNGCompressor</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.4</string>
+	<key>CFBundleVersion</key>
+	<string>14</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.13</string>
+	<key>SUFeedURL</key>
+	<string>https://github.com/nazonoz/pngquant_gui_for_macOS/releases/latest</string>
+	<key>SUAllowsAutomaticUpdates</key>
+	<true/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
+	<key>SUShowReleaseNotes</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>com.apple.security.network.client</key>
+	<true/>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.graphics-design</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSUserAgent</key>
+	<string>PNGCompressor/0.1.4 (macOS)</string>
+	<key>SUPublicEDKey</key>
+	<string>MCEgQkmWNd4Vu3+KED58Dd2EaDKMgyhKuRj6r6HYS2s=</string>
+	<key>SUSigningPublicKeyEdDSA</key>
+	<string>MCEgQkmWNd4Vu3+KED58Dd2EaDKMgyhKuRj6r6HYS2s=</string>
+</dict>
+</plist>

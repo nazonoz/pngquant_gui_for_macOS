@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F1DAA2BF2D649A74000F5C9C /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = F1DAA2BE2D649A74000F5C9C /* Sparkle */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F1DC95CA2D5F295300453A37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,22 @@
 		F1DC96032D60F36B00453A37 /* PNGCompressorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PNGCompressorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F1DAA2C12D64BF4A000F5C9C /* Exceptions for "PNGCompressor" folder in "PNGCompressor" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				info.plist,
+			);
+			target = F1DC95B72D5F295200453A37 /* PNGCompressor */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F1DC95BA2D5F295200453A37 /* PNGCompressor */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F1DAA2C12D64BF4A000F5C9C /* Exceptions for "PNGCompressor" folder in "PNGCompressor" target */,
+			);
 			path = PNGCompressor;
 			sourceTree = "<group>";
 		};
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1DAA2BF2D649A74000F5C9C /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1DAA2BC2D649A3C000F5C9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F1DC95AF2D5F295200453A37 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,7 @@
 				F1DC96012D5FDA0300453A37 /* PNGCompressor.app */,
 				F1DC96022D60F36B00453A37 /* PNGCompressorTests.xctest */,
 				F1DC96032D60F36B00453A37 /* PNGCompressorUITests.xctest */,
+				F1DAA2BC2D649A3C000F5C9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +130,7 @@
 			);
 			name = PNGCompressor;
 			packageProductDependencies = (
+				F1DAA2BE2D649A74000F5C9C /* Sparkle */,
 			);
 			productName = PNGCompressor;
 			productReference = F1DC96012D5FDA0300453A37 /* PNGCompressor.app */;
@@ -187,6 +214,9 @@
 			);
 			mainGroup = F1DC95AF2D5F295200453A37;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F1DAA2BD2D649A74000F5C9C /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F1DC95AF2D5F295200453A37;
 			projectDirPath = "";
@@ -313,6 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "pngquant gui for macOS";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
@@ -371,6 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "pngquant gui for macOS";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
@@ -403,7 +435,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
-				MARKETING_VERSION = 0.1.3;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = takkun.PNGCompressor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -433,7 +465,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
-				MARKETING_VERSION = 0.1.3;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = takkun.PNGCompressor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -545,6 +577,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1DAA2BD2D649A74000F5C9C /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1DAA2BE2D649A74000F5C9C /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1DAA2BD2D649A74000F5C9C /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1DC95B02D5F295200453A37 /* Project object */;
 }
