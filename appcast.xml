@@ -6,15 +6,14 @@
     <description>Latest updates for PNGCompressor</description>
     <language>ko</language>
     <item>
-      <title>Version 0.1.5</title>
-      <sparkle:releaseNotesLink>https://github.com/nazonoz/pngquant_gui_for_macOS/releases/tag/0.1.5</sparkle:releaseNotesLink>
-      <pubDate>Mon, 19 Feb 2025 12:00:00 +0000</pubDate>
-      <enclosure url="https://github.com/nazonoz/pngquant_gui_for_macOS/releases/download/0.1.5/PNGCompressor-0.1.5.zip"
-                 sparkle:version="015"
-                 sparkle:shortVersionString="0.1.5"
+      <title>Version 0.1.4</title>
+      <sparkle:releaseNotesLink>https://github.com/nazonoz/pngquant_gui_for_macOS/releases/tag/0.1.4</sparkle:releaseNotesLink>
+      <pubDate>Mon, 19 Feb 2025 13:00:00 +0900</pubDate>
+      <enclosure url="https://github.com/nazonoz/pngquant_gui_for_macOS/releases/download/0.1.5/PNGCompressor-0.1.4.dmg"
+                 sparkle:version="014"
+                 sparkle:shortVersionString="0.1.4"
                  type="application/octet-stream"
-                sparkle:edSignature="5gd3+11m7KTrSPy2Y5iw/VrMTlMlNT1nhmEGqdMbpxgjaAixbku3joR2S8PAnTXbat87IhWAO/0mnB+YRcZPAQ=="
-                length="1007847"
+                sparkle:edSignature="MLHWK+wQCeZuwSVX+Ak6248uv2H/o5qRrX5zRQMAruQD7pTPL967A48cxCX5trWQMoU+i7bUVAJhSPi9G8N3Aw==" length="3089069"
         />
     </item>
   </channel>
